@@ -4,6 +4,11 @@ The project uses Apache Zookeeper `(v3.4.12)` to solve Leader Election algorithm
 
 Makes use of the Zookeeper API to create children Znodes in `/election` zNode in the Zookeeper.
 
+Leader keeps track of each systems hostname, port and the protocol used in a Service Registry.
+
+There exists a `/service_registry` Persistent zNode in the ZooKeeper and all the systems make an Ephemeral Znode which will hold the hostname and port.
+The `/service_registry` zNode will keep a track of these and update accordingly when a system goes down and comes back up again.
+
 Everything was done in Ubuntu OS (recommended to do in any Linux OS if you are new to Zookeeper, Windows can be a bit tricky to set up the ZK and run it)
 
 ## Project Setup
@@ -27,6 +32,6 @@ Open the maven project in Intellij, open a terminal and create a jar file.
 
 Do `mvn clean package` to create a jar file. It will be located in the `target` folder and you can open this folder in the terminal.
 
-Open 2-3 additional terminals and run the jar file by executing `java -jar jar_filename` 
+Open 2-3 additional terminals and run the jar file by executing `java -jar jar_filename (port_number)` 
 
 You will see the result.

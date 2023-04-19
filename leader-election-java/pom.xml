@@ -33,7 +33,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>LeaderElection</mainClass>
+                            <mainClass>distributed.systems.LeaderElection</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
