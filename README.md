@@ -18,7 +18,7 @@ The project code is in the `LeaderElection.java` file.
 Before you work on this project, you need to install Apache Zookeeper `(v3.4.12)` and edit the `zoo.sample.conf` file in the `conf` folder.
 Rename it to `zoo.conf`, make a `logs` folder in the Zookeeper folder (one level below the conf folder), and change the dataDirs = `Zookeeper_file_location\logs`.
 
-Also depending on you java jdk, change the `pom.xml` to have the correct source and target compiler.
+Also depending on your java jdk, change the `pom.xml` to have the correct source and target compiler.
 
 ## How to run
 
